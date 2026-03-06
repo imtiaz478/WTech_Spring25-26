@@ -13,7 +13,10 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     }   
 
     console.log("First Name:", firstname);  
-    
+    console.log("Last Name:", lastname);
+    console.log("Email:", email);   
+    console.log("Phone:", phone);
+    console.log("Message:", message);
 
     
 });
