@@ -2,80 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Student Registration Page</h1>
+    <form action="">
+        <label for="name">Student Name:</label>
+        <input type="text" placeholder="Enter Your Name">
+        <br>
+        <br>
+        <label for="cgpa">Student CGPA:</label>
+        <input type="text" placeholder="Enter Your CGPA">
+        <br>
+        <br>
+        <label for="gender">Male</label>
+        <input type="radio" name="male">
+        <br>
+        <br>
+        <label for="gender">Female</label>
+        <input type="radio" name="female">
+        <br>
+        <br>
+        <label for="department">Select Department:</label>
+        <select name="dept">
+            <option>CSE</option>
+        </select>
+        <br>
+        <br>
+        <label for="ID">Student ID</label>
+        <input type="text">
+        <br>
+        <br>
+        <label for="address">Address:</label>
+        <textarea name="" id="" cols="30" rows="4" placeholder="Enter your address here"></textarea>
+        <br>
+        <br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob">
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter your Email">
+        <br>
+        <br>
+        <label for="grade">Upload your Grade Report:</label>
+        <input type="file" name="grade">
+        <br>
+        <br>
+        <label for="terms">I agree to the terms and conditions</label>
+        <input type="checkbox" name="terms">
+        <br>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number">
+        <br>
+        <br>
+        <label for="submit-info">Submit your information</label>
+        <br>
+        <input type="submit" name="submit-info">
 
-    <div class="container">
-        <h1 id="main-title">Student Registration Page</h1>
 
-        <form id="registration-form">
 
-            <div class="form-group">
-                <label for="name">Student Name:</label>
-                <input type="text" id="name" class="input-field" placeholder="Enter Your Name">
-            </div>
 
-            <div class="form-group">
-                <label for="cgpa">Student CGPA:</label>
-                <input type="text" id="cgpa" class="input-field" placeholder="Enter Your CGPA">
-            </div>
 
-            <div class="form-group">
-                <label>Gender:</label>
-                <input type="radio" name="gender" value="male"> Male
-                <input type="radio" name="gender" value="female"> Female
-            </div>
-
-            <div class="form-group">
-                <label for="department">Select Department:</label>
-                <select id="department" class="input-field">
-                    <option>CSE</option>
-                    <option>BBA</option>
-                    <option>EEE</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="id">Student ID:</label>
-                <input type="text" id="id" class="input-field">
-            </div>
-
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <textarea id="address" class="input-field" rows="4"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" class="input-field">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" class="input-field">
-            </div>
-
-            <div class="form-group">
-                <label for="grade">Upload Grade Report:</label>
-                <input type="file" id="grade">
-            </div>
-
-            <div class="form-group">
-                <input type="checkbox" id="terms">
-                <label for="terms">I agree to terms and conditions</label>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" class="input-field">
-            </div>
-
-            <button type="submit" class="submit-btn">Submit</button>
-
-        </form>
-    </div>
-
+    </form>
 </body>
 </html>
