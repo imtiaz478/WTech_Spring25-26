@@ -1,0 +1,45 @@
+input , textarea{
+    width: 100%;
+}
+
+
+
+
+form{
+    width: 370px;
+    height: 330px;
+    background-color: #eee;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+h1{
+    
+   
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+td{
+    padding: 15px;
+    
+}
+
+label{
+    font-weight: 600;
+}
+
+.btn{
+    background-color: green;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;    
+    padding-top: 4px;
+    padding-bottom: 4px;   
+    margin-left: 100px;  
+}
