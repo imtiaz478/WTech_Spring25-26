@@ -8,7 +8,7 @@ input , textarea{
 form{
     width: 370px;
     height: 330px;
-    background-color: #eee;
+    background-color: white;
     padding: 30px;
     border-radius: 8px;
 }
