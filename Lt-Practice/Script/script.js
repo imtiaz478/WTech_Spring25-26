@@ -6,5 +6,13 @@ function analyzeText(){
 
     const charCount = text.length;
 
+    const words = text.trim().split(" ");
+    const wordsCount = words.length;
+
     console.log(charCount)
+    console.log(wordsCount)
+
+    const reversedText = text.split("").reverse().join("");
+
+    console.log(reversedText)
 }
