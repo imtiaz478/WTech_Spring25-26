@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 600px;
+    background: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0lvw;
+}
+
+h1{
+    margin-left: 180px;
+}
+
+textarea{
+    width: 600px;
+}
+
+#anlyBtn{
+    width: 600px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: azure;
+}
