@@ -15,4 +15,11 @@ function analyzeText(){
     const reversedText = text.split("").reverse().join("");
 
     console.log(reversedText)
+
+    rst.innerHTML = `
+    <p>Character Count: ${charCount}</p>
+    <p>word Count: ${wordsCount}</p>
+    <p>Reverse string: ${reversedText}</p>
+
+    `
 }
