@@ -1,3 +1,7 @@
+<?php 
+include "../controller/indexValidation.php";    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
