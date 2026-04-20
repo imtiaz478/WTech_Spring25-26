@@ -8,7 +8,33 @@ include "../controller/indexValidation.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-   
+    <style>
+        .required-note {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            border: 1px solid #999;
+            padding: 2px 4px;
+            font-size: 13px;
+            width: 200px;
+        }
+
+        textarea {
+            width: 320px;
+            height: 80px;
+            resize: vertical;
+        }
+        .star {
+            color: red;
+            font-size: 13px;
+        }
+        .error-msg {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
 <p class="required-note">* required field</p>
@@ -45,6 +71,10 @@ include "../controller/indexValidation.php";
                         <label for="other">Other</label>
                     </td>
             </tr>
+
+            <tr>
+                    <td><input type = "submit" id = "submit" name = "submit" value="Submit"> </td>
+                </tr>
 
 
 
