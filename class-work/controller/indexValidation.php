@@ -2,12 +2,18 @@
 
 session_start();
 
+header('content-type: application/json');   
+
+$datafile = "../view/data.json";
+
 $name ="";
 $email = "";
 $website = "";
 $comment ="";
 $gender=""; 
 $nameErr = $emailErr = $websiteErr = $genderErr = "";
+
+$response = [];
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = $_POST["name"];
