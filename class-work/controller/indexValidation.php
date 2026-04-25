@@ -1,19 +1,22 @@
 <?php
 
+session_start();
+
 $name ="";
 $email = "";
 $website = "";
 $comment ="";
 $gender=""; 
+$nameErr = $emailErr = $websiteErr = $genderErr = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = $_POST["name"];
 
     if(empty($name)){
-        $name = "Name is required";
+        $nameErr = "Name is required";
     }
     elseif(!preg_match("/^[a-zA-Z ]+$/", $name)){
-        $name = "Only letters and white space allowed";
+        $nameErr = "Only letters and white space allowed";
     }
     else{
         echo "User Name: ".$name;
@@ -21,10 +24,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    
     $email = $_POST["email"];
     if(empty($email)){
-        $email = "E-mail is required";
+        $emailErr = "E-mail is required";
     }
     elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $email = "Invalid email format";
+        $emailErr = "Invalid email format";
     }
     else{
         echo "Email: ".$email;  
@@ -32,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $website = $_POST["website"];   
     if(!empty($website) && !filter_var($website, FILTER_VALIDATE_URL)){
-        $website = "Invalid URL";
+        $websiteErr = "Invalid URL";
     }
     else{
         echo "Website: ".$website;
@@ -41,14 +44,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $comment = $_POST["comment"];   
 
     if(empty($_POST["gender"])){
-        $gender = "Gender is required"; 
+        $genderErr = "Gender is required"; 
     }
     else{
-        $gender = "";
+        $gender = $_POST["gender"];
     }
 
+    if(empty($nameErr) && empty($emailErr) && empty($websiteErr) && empty($genderErr)){
+        $_SESSION["name"] = $name;
+        setcookie("name", $name, time()+3600, "/");
+        setcookie("email", $email, time()+3600, "/");
+        setcookie("website", $website, time()+3600, "/");
+        setcookie("comment", $comment, time()+3600, "/");
+        setcookie("gender", $gender, time()+3600, "/");
 
-
-   
+    }
+}
+if(isset($_SESSION["name"]) || isset($_COOKIE["name"])){
+    echo "Welcome Back";
+}
+else{
+    echo "please submit the form";
 }
 ?>
