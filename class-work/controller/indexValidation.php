@@ -2,9 +2,7 @@
 
 session_start();
 
-header('content-type: application/json');   
 
-$datafile = "../view/data.json";
 
 $name ="";
 $email = "";
@@ -64,7 +62,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         setcookie("comment", $comment, time()+3600, "/");
         setcookie("gender", $gender, time()+3600, "/");
 
+
+       
     }
+
+  
+
 }
 if(isset($_SESSION["name"]) || isset($_COOKIE["name"])){
     echo "Welcome Back";
