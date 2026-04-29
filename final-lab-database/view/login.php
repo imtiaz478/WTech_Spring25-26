@@ -7,6 +7,9 @@
 </head>
 <body>
     <form action="">
+        <?php
+        echo "<h1 style='color: red'>Login</h1>"
+        ?>
         <table>
             <tr>
                 <td>Username</td>
