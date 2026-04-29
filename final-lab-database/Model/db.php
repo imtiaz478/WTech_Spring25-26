@@ -15,5 +15,10 @@ class db{
 
         return $this->connection->query($sql);
     }
+
+    function login($email, $password){
+        $sql = "SELECT * FROM `users` WHERE email='$email' AND password='$password'";
+        return $this->connection->query($sql);
+    }
 }
 ?>

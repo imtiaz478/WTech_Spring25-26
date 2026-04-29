@@ -1,4 +1,5 @@
 <?php
+include "../Model/db.php";  
 session_start();
 header('content-type: application/json');   
 
@@ -50,5 +51,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         "status" => "success",
         "data" => $formdata 
     ]);
+
+    $database = new db();   
+
+    $connection = $database->connection();
+
+    $result = $database->signup($name, $email, $password, $website, $gender);
+
+    if($result){
+        Header("Location: ../view/login.php");  
+    }
+    else{
+        echo "Error: " . $connection->error;    
+    }
+
+    
 }
 ?>
