@@ -13,5 +13,13 @@
         "website": "https:\/\/gemini.google.com\/app",
         "comment": "assc",
         "gender": "male"
+    },
+    {
+        "name": "imtiaz",
+        "email": "binalamimtiaz@gmail.com",
+        "password": "111",
+        "website": "https:\/\/gemini.google.com\/app",
+        "comment": "acsac",
+        "gender": "male"
     }
 ]
