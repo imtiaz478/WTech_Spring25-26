@@ -12,12 +12,12 @@
         ?>
         <table>
             <tr>
-                <td>Username</td>
-                <td><input type="text" name="username"></td>
+                <td>Email</td>
+                <td><input type="email" name="email" required></td>
             </tr>
             <tr>
                 <td>Password</td>
-                <td><input type="password" name="password"></td>
+                <td><input type="password" name="password" required></td>
             </tr>
              <tr>
                 <td></td>

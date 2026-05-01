@@ -2,21 +2,30 @@
 session_start();    
 include "../Model/db.php";  
 
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $username = $_POST["username"];
-    $password = $_POST["password"]; 
+
+    $email = $_POST["email"] ?? '';
+    $password = $_POST["password"] ?? '';
+
+    if(empty($email) || empty($password)){
+        echo "Please fill all fields!";
+        exit();
+    }
 
     $obj = new db();    
-    $connection = $obj->connection();
-    $result = $obj->login($username, $password);  
+    $obj->connection();
+
+    $result = $obj->login($email, $password);  
 
     if($result){
-       Header("Location: ../view/dashboard.php");    
+       $_SESSION['email'] = $email;
+       header("Location: ../view/dashboard.php");    
     }
     else{
         echo "Login failed. Please check your credentials.";    
     }
 }
-
+else{
+    echo "Invalid request!";
+}
 ?>
