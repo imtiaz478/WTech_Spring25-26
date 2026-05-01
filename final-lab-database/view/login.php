@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="../controller/loginValidation.php" method="post">
         <?php
         echo "<h1 style='color: red'>Login</h1>"
         ?>

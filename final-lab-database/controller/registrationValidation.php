@@ -1,11 +1,9 @@
 <?php
 include "../Model/db.php";  
-session_start();
-header('content-type: application/json');   
+  
 
-$datafile = "../data.json";
 
-$response = [];
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = $_POST["name"];
@@ -16,10 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $gender = $_POST["gender"];
 
     if(empty($name) || empty($email) || empty($gender) || empty($password)){
-        echo json_encode([
-            "status" => "error",
-            "message" => "Please fill in all required fields."
-        ]);
+        echo "All required fields must be filled out."; 
         exit();
     }
 
